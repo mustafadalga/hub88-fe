@@ -19,6 +19,7 @@ export default function InputSearch({ id = "search", value, onChange, placeholde
                className="flex items-center gap-3 h-12 p-4 rounded-xl border border-solid border-neutral-400 hover:[&:not(:focus-within)]:border-indigo-400 focus-within:border-indigo-600 transition-all duration-300 group">
             <MagnifyingGlassIcon
                 aria-hidden="true"
+                data-testid="icon-search"
                 className="size-4 text-neutral-600 group-focus-within:text-indigo-600 group-hover:text-indigo-600"/>
 
             <input
