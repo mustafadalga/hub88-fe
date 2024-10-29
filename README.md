@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+## Countries Data Explorer
+A React-based web application to explore country data using Apollo Client and GraphQL. This project retrieves data from a GraphQL endpoint to display country information in a table format with search and filtering functionality.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Used Technologies
+* React.js
+* Typescript
+* Tailwind CSS
+* Vitest
+* Testing Library
 
-Currently, two official plugins are available:
+### Demo
+* https://hub88-fe.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Installation
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone git@github.com:mustafadalga/hub88-fe.git
+cd hub88-fe
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Set Environment Variable
+* The following variables should be defined in an .env file.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+**Environment Variables(.env)**
+* VITE_APOLLO_SERVER_URL
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Test apollo server url: https://countries.trevorblades.com
+
+
+### Running the Project
+To start the development server and run the project locally, use the following command:
 ```
+npm run dev
+```
+Once the server is running, you can access the project in your web browser at http://localhost:5173.
+
+### Run Unit Tests
+```
+npm run test:unit
+```
+
+
+### Building
+Run the build command:
+```
+npm run build
+```
+
+<hr/>
+
+### Screenshots
+
+![screenshot 1](https://github.com/user-attachments/assets/b14d14a4-2214-4d05-aa8d-9ca52b34c9f9)
+
+
+![screenshot 2](https://github.com/user-attachments/assets/48a866de-8523-4a13-a5e0-feb571963fc3)
+
+![screenshot 3](https://github.com/user-attachments/assets/d4ac9cda-472f-4464-a08a-48fbce72a2c6)
