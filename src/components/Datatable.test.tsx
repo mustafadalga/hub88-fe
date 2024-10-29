@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Datatable, { Column } from "./DataTable.tsx"
+import DataTable, { Column } from "./DataTable.tsx"
 
 interface TestData {
     code: string;
@@ -18,17 +18,17 @@ const data: TestData[] = [
 ];
 
 
-describe("Datatable.tsx", () => {
+describe("DataTable.tsx", () => {
 
     it("renders column headers correctly", () => {
-        render(<Datatable columns={columns} data={data}/>);
+        render(<DataTable columns={columns} data={data}/>);
         columns.forEach((column) => {
             expect(screen.getByText(column.header)).toBeInTheDocument();
         });
     });
 
     it("renders data rows correctly", () => {
-        render(<Datatable columns={columns} data={data}/>);
+        render(<DataTable columns={columns} data={data}/>);
 
         data.forEach((row) => {
             expect(screen.getByText(row.code)).toBeInTheDocument();
@@ -37,13 +37,13 @@ describe("Datatable.tsx", () => {
     });
 
     it("displays 'No matching results found' when data is empty", () => {
-        render(<Datatable columns={columns} data={[]}/>);
+        render(<DataTable columns={columns} data={[]}/>);
         expect(screen.getByText("No matching results found")).toBeInTheDocument();
     });
 
     it("displays custom no match text when provided", () => {
         const customMessage = "No data available";
-        render(<Datatable columns={columns} data={[]} noMatchText={customMessage}/>);
+        render(<DataTable columns={columns} data={[]} noMatchText={customMessage}/>);
         expect(screen.getByText(customMessage)).toBeInTheDocument();
     });
 
