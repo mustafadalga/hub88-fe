@@ -35,7 +35,7 @@ export default function InputSearch({ id = "search", value, onChange, placeholde
                 autoComplete="off"
                 aria-label="Search"
                 role="searchbox"
-                className="peer text-sm text-neutral-600 font-normal font-sans !leading-4 tracking-[0.14px] outline-0 w-full bg-transparent"/>
+                className="text-sm text-neutral-600 font-normal font-sans !leading-4 tracking-[0.14px] [outline:0px] w-full bg-transparent"/>
         </label>
     )
 }
