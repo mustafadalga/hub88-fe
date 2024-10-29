@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import IconSearch from "@/components/icons/IconSearch.tsx";
 
 interface Props {
     id?: string,
@@ -17,10 +17,14 @@ export default function InputSearch({ id = "search", value, onChange, placeholde
     return (
         <label htmlFor={id}
                className="flex items-center gap-3 h-12 p-4 rounded-xl border border-solid border-neutral-400 hover:[&:not(:focus-within)]:border-indigo-400 focus-within:border-indigo-600 transition-all duration-300 group">
-            <MagnifyingGlassIcon
-                aria-hidden="true"
-                data-testid="icon-search"
-                className="size-4 text-neutral-600 group-focus-within:text-indigo-600 group-hover:text-indigo-600"/>
+
+            <div aria-hidden="true"
+                 data-testid="icon-search">
+                <IconSearch
+                    className="size-4"
+                    pathClass="text-neutral-600 group-focus-within:text-indigo-600 group-hover:text-indigo-600"/>
+            </div>
+
 
             <input
                 type="text"
