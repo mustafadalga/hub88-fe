@@ -4,7 +4,22 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            animation: {
+                rotation: 'rotation 1s linear infinite',
+            },
+            keyframes: {
+                rotation: {
+                    '0%': {
+                        transform: 'rotate(0deg)',
+                    },
+                    '100%': {
+                        transform: 'rotate(360deg)',
+                    },
+                },
+            }
+        },
+
     },
     plugins: [],
 };
