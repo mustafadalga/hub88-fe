@@ -1,8 +1,9 @@
-function App() {
+import ApolloProvider from "@/graphql/ApolloProvider.tsx";
 
+function App() {
     return (
-        <div>
-        </div>
+        <ApolloProvider>
+        </ApolloProvider>
     )
 }
 
