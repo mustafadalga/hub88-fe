@@ -14,13 +14,15 @@ export default function DataTable<T>({ columns, data, noMatchText = "No matching
         <table className="grid w-full rounded-md sm:rounded-lg overflow-hidden text-left"
                aria-label="Data table">
             <thead className="grid grid-cols-[100px_1fr] text-[10px] lg:text-sm text-white uppercase bg-indigo-500">
-            {columns.map(column => (
-                <th key={String(column.accessor)}
-                    scope="col"
-                    className="px-6 py-4">
-                    {column.header}
-                </th>
-            ))}
+           <tr>
+               {columns.map(column => (
+                   <th key={String(column.accessor)}
+                       scope="col"
+                       className="px-6 py-4">
+                       {column.header}
+                   </th>
+               ))}
+           </tr>
             </thead>
             <tbody>
 
