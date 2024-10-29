@@ -5,7 +5,7 @@ import InputSearch from "@/components/InputSearch.tsx";
 import DataTable, { Column } from "@/components/DataTable.tsx";
 import Loader from "@/components/Loader.tsx";
 
-interface Country {
+export interface Country {
     code: string;
     name: string;
 }
